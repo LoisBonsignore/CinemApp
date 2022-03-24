@@ -1,0 +1,8 @@
+.slider-general-container h1 {
+    color: white;
+    animation: fadeIn 2s;
+    margin: 2%;
+}
+.slider-general-container {
+    margin: 0 auto;
+}
