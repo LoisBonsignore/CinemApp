@@ -43,32 +43,48 @@ export default function Movies() {
 
 
     return (
-        <div className='slider-general-container'>
-            <h1>Slider des 30 autres films les plus populaires (Du 11 au 40ème)</h1>
-            <div className='slider-container'>
-                <Swiper
-                    // install Swiper modules
-                    modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-                    spaceBetween={10}
-                    slidesPerView={3}
-                    navigation
-                    pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
-                    autoplay={{
-                        delay: 2000,
-                        disableOnInteraction: false,
-                    }}
-                >
-                    {movies?.slice(10, 40).map((movie) => {
-                        return (
-                            <SwiperSlide key={movie?.id}>
-                                <Diapo movie={movie} />
-                            </SwiperSlide>
-                        )
-                    })}
-                    ...
-                </Swiper>
+        <section>
+            <div className='slider-general-container'>
+                <h1>Slider des 30 autres films les plus populaires (Du 11 au 40ème)</h1>
+                <div className='slider-container'>
+                    <Swiper
+                        // install Swiper modules
+                        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                        spaceBetween={30}
+                        slidesPerView={3}
+                        navigation
+                        pagination={{ clickable: true }}
+                        scrollbar={{ draggable: true }}
+                        autoplay={{
+                            delay: 2000,
+                            disableOnInteraction: false,
+                        }}
+                        breakpoints={{
+                            1200: {
+                                width: 1200,
+                                slidesPerView: 3,
+                            },
+                            600: {
+                                width: 600,
+                                slidesPerView: 2,
+                            },
+                            250: {
+                                width: 250,
+                                slidesPerView: 1,
+                            }
+                        }}
+                    >
+                        {movies?.slice(10, 40).map((movie) => {
+                            return (
+                                <SwiperSlide key={movie?.id}>
+                                    <Diapo movie={movie} />
+                                </SwiperSlide>
+                            )
+                        })}
+                        ...
+                    </Swiper>
+                </div>
             </div>
-        </div>
+        </section>
     )
 }

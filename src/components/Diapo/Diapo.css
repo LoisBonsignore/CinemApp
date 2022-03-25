@@ -1,22 +1,15 @@
 .slider-container .card {
     background: lightgrey;
     color: #333;
-    padding: 20px;
+    width: 280px;
+    height: 500px;
+    margin: 20px auto;
+    padding: 15px;
     border-radius: 4px;
-    width: 88%;
-    height: 55vh;
-    margin-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: normal;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     animation: fadeIn 2s;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
 }
 .slider-container {
-    margin: 2% 15% ;
-    cursor: grab;
-}
-.slider-container:active {
-    cursor: grabbing;
+    
+    margin: 0 5%;
 }

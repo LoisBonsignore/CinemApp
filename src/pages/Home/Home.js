@@ -19,15 +19,17 @@ export default function Home() {
 
 
     return (
-        <div className='home-container'>
-            <h1>Les 10 films les plus populaires du moment</h1>
-            <div className='film-list'>
-                {movies?.results?.slice(0, 10).map((movie) => {
-                    return (
-                        <Card key={movie.id} movie={movie} />
-                    )
-                })}
+        <section>
+            <div className='home-container'>
+                <h1>Les 10 films les plus populaires du moment</h1>
+                <div className='film-list'>
+                    {movies?.results?.slice(0, 10).map((movie) => {
+                        return (
+                            <Card key={movie.id} movie={movie} />
+                        )
+                    })}
+                </div>
             </div>
-        </div>
+        </section>
     )
 }

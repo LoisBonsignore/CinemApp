@@ -11,9 +11,8 @@
         opacity: 1;
     }
 }
-.film-list {
+.home-container .film-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    max-width: 1400px;
-    margin: 40px auto;
 }
