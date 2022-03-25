@@ -10,6 +10,9 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
 }
 .slider-container {
-    
-    margin: 0 5%;
+    margin: 0 5% ;
+    cursor: grab;
+}
+.slider-container:active {
+    cursor: grabbing;
 }
